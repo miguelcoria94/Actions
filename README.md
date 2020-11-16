@@ -88,3 +88,9 @@ Cnstants are used for all the fruit action types.
 
 This is to prevent simple typos in the reducers case clauses
 
+<h1 align='center'>
+Reviewing a completed Fruit Stand example
+</h1>
+
+
+Check repo folder
