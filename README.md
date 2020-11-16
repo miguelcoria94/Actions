@@ -51,3 +51,40 @@ Now we can add any fruit to the store using our action creator addFruit(fruit), 
     store.dispatch(addFruit('lychee'));
     console.log(store.getState()); // [ 'orange', 'apple', 'strawberry', 'lychee' ]
 ```
+
+<h1 align='center'>
+Preventing typos in action type string literals
+</h1>
+
+Update your actions to include 'ADD_FRUIT', 'ADD_FRUITS', 'SELL_FRUIT', and 'SELL_OUT':
+
+```js
+    const ADD_FRUIT = 'ADD_FRUIT';
+    const ADD_FRUITS = 'ADD_FRUITS';
+    const SELL_FRUIT = 'SELL_FRUIT';
+    const SELL_OUT = 'SELL_OUT';
+
+    const addFruit = (fruit) => ({
+    type: ADD_FRUIT,
+    fruit,
+    });
+
+    const addFruits = (fruits) => ({
+    type: ADD_FRUITS,
+    fruits,
+    });
+
+    const sellFruit = (fruit) => ({
+    type: SELL_FRUIT,
+    fruit,
+    });
+
+    const sellOut = () => ({
+    type: SELL_OUT,
+    });
+```
+
+Cnstants are used for all the fruit action types.
+
+This is to prevent simple typos in the reducers case clauses
+
